@@ -5,7 +5,7 @@ output: html_document
 # CODE BOOK FOR THE CLEANING DATA WEEK 4 PROJECT
 ## This document explains about  what are the steps followed to tidy the data and processing done to find the final result set as per the requirement
 ### following are the steps performed
-(
+
 * Set the working directory and download the zipfile as mentioned in the course project https://www.coursera.org/learn/data-cleaning/peer/FIZtT/getting-and-cleaning-data-course-project
 * Check if the folder already exists, if not download the zip file and unzip it
 * Change the working directory to the unzipped dataset folder
@@ -15,9 +15,11 @@ output: html_document
 * Add the activity name for easy readability
 * Once tidied, filter the data set with only required column i.e Mean and Std columns as per the requirement
 * Run the average on Mean and STD columns after grouping by Subject and Activity Name
+  ddply(tidydata_subset, .(subjectid,activityname), colwise(mean, average_columns))
 * Rename the columns accordingly so they read to the user as Average value instead of measured value
 * The final result is written into a cvs file as UCIHAR_AverageMeanStd_Resultset.csv
-(
+
+
  subjectid                            
  activityname                        
  Avg_tBodyAccMeanX                
@@ -99,5 +101,5 @@ output: html_document
  Avg_fBodyBodyGyroJerkMagMean     
  Avg_fBodyBodyGyroJerkMagStd     
  Avg_fBodyBodyGyroJerkMagMeanFreq
-(
+
 
