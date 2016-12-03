@@ -74,8 +74,8 @@ finalresult_set_names <- c("subjectid","activityname",
 colnames(finalresult_set) <- finalresult_set_names
 
 # write the final result into a csv file
-if (!file.exists("./UCIHAR_Average_Resultset.txt")) {
-  write.csv(finalresult_set,"./UCIHAR_Average_Resultset.txt")
+if (!file.exists("./UCIHAR_AverageMeanStd_Resultset.txt")) {
+  write.csv(finalresult_set,"./UCIHAR_AverageMeanStd_Resultset.txt",row.names=FALSE)
 }
 
 
